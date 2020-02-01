@@ -28,6 +28,7 @@ export default ({ data }) => (
               <BlogTitle>{ node.frontmatter.title } - { node.frontmatter.date }</BlogTitle>
             </BlogLink>
             <p>{ node.excerpt }</p>
+            <p>{ node.frontmatter.intro }</p>
           </div>
         ))
       }
@@ -46,6 +47,7 @@ export const query = graphql`
             description
             title
             date
+            intro
           }
           fields{
             slug
